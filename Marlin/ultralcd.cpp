@@ -432,7 +432,7 @@ if (fil_temp == 200)
 {
 setTargetHotend0(plaPreheatHotendTemp);
 }
-if (fil_temp == 230)
+if (fil_temp == 215)
 {
 setTargetHotend0(absPreheatHotendTemp);
 }
@@ -507,7 +507,7 @@ lcd_fc();
 }
 static void lcd_fc_abs()
 {
-fil_temp = 230;
+fil_temp = 215;
 lcd_fc();
 }
 
@@ -517,7 +517,7 @@ if (fil_temp == 200)
 {
 setTargetHotend0(plaPreheatHotendTemp);
 }
-if (fil_temp == 230)
+if (fil_temp == 215)
 {
 setTargetHotend0(absPreheatHotendTemp);
 }
@@ -568,7 +568,7 @@ lcd_fd();
 }
 static void lcd_fd_abs()
 {
-fil_temp = 230;
+fil_temp = 215;
 lcd_fd();
 }
 
@@ -767,10 +767,10 @@ if (fil_temp == 200)
 enquecommand_P(PSTR("M190 S60"));//wait for bed temperature to be reached
 enquecommand_P(PSTR("M104 S200"));//set temperature
 }
-if (fil_temp == 230)	
+if (fil_temp == 215)	
 {
 enquecommand_P(PSTR("M190 S100"));//wait for bed temperature to be reached
-enquecommand_P(PSTR("M104 S230"));//set temperature
+enquecommand_P(PSTR("M104 S215"));//set temperature
 }
 enquecommand_P(PSTR("G28 X0 Y0"));//Home x and y axis
 enquecommand_P(PSTR("G1 X20 Y20 F4000"));//Center extruder above bed
@@ -780,9 +780,9 @@ if (fil_temp == 200)
 {
 enquecommand_P(PSTR("M109 S200"));//set temperature
 }
-if (fil_temp == 230)	
+if (fil_temp == 215)	
 {
-enquecommand_P(PSTR("M109 S230"));//set temperature
+enquecommand_P(PSTR("M109 S215"));//set temperature
 }
 enquecommand_P(PSTR("G90"));//use absolute coordinates
 enquecommand_P(PSTR("G92 E0"));
@@ -793,24 +793,23 @@ enquecommand_P(PSTR("M82"));//use absolute distances for extrusion
 //}
 enquecommand_P(PSTR("G1 F900.000 E-0.90000"));
 enquecommand_P(PSTR("G92 E0"));
-enquecommand_P(PSTR("G1 Z0.300 F15000.000"));
-enquecommand_P(PSTR("G1 X190.000 Y190.000 F6000.000"));
-enquecommand_P(PSTR("G1 E0.90000 F900.000"));
-enquecommand_P(PSTR("G1 X10.100 Y190.000 E13.15906 F576.000"));
-enquecommand_P(PSTR("G1 X10.017 Y189.983 E13.16482"));
-enquecommand_P(PSTR("G1 X10.000 Y189.900 E13.17059"));
-enquecommand_P(PSTR("G1 X10.000 Y10.100 E25.42283"));
-enquecommand_P(PSTR("G1 X10.017 Y10.017 E25.42859"));
-enquecommand_P(PSTR("G1 X10.100 Y10.000 E25.43436"));
-enquecommand_P(PSTR("G1 X189.900 Y10.000 E37.68660"));
-enquecommand_P(PSTR("G1 X189.983 Y10.017 E37.69236"));
-enquecommand_P(PSTR("G1 X190.000 Y10.100 E37.69813"));
-enquecommand_P(PSTR("G1 X190.000 Y184.900 E49.60965"));
-enquecommand_P(PSTR("G1 X189.983 Y184.983 E49.61542"));
-enquecommand_P(PSTR("G1 X189.900 Y185.000 E49.62118"));
-enquecommand_P(PSTR("G1 X22.041 Y185.000 E61.05972"));
-enquecommand_P(PSTR("G1 F900.000 E60.15972"));
+enquecommand_P(PSTR("G1 Z0.200 F1002"));
+enquecommand_P(PSTR("G1 X27.800 Y27.475 F9000"));
+enquecommand_P(PSTR("G1 E0.0000 F297"));
+enquecommand_P(PSTR("G1 X172.525 Y27.475 E7.2240 F864"));
+enquecommand_P(PSTR("G1 X172.525 Y172.525 E14.4642"));
+enquecommand_P(PSTR("G1 X27.475 Y172.525 E21.7044"));
+enquecommand_P(PSTR("G1 X27.475 Y34.475 E28.5951"));
+enquecommand_P(PSTR("G1 X160.159 Y34.475 E35.2181"));
+enquecommand_P(PSTR("G1 X160.159 Y34.525 E35.2206"));
+enquecommand_P(PSTR("G1 X27.525 Y34.525 E41.8410"));
+enquecommand_P(PSTR("G1 X27.525 Y172.475 E48.7268"));
+enquecommand_P(PSTR("G1 X172.475 Y172.475 E55.9620"));
+enquecommand_P(PSTR("G1 X172.475 Y27.525 E63.1972"));
+enquecommand_P(PSTR("G1 X27.800 Y27.525 E70.4187"));
+enquecommand_P(PSTR("G1 X27.800 Y27.475 E70.4212"));
 enquecommand_P(PSTR("G92 E0"));
+enquecommand_P(PSTR("G1 Z5 F1002"));
 //if (fil_temp == 200)
 //{
 //enquecommand_P(PSTR("M107"));
@@ -832,7 +831,7 @@ lcd_calibrate_bed();
 	
 static void lcd_cal_abs()
 {
-fil_temp = 230;	
+fil_temp = 215;	
 lcd_calibrate_bed();	
 }	
 

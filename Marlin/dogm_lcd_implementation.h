@@ -128,7 +128,7 @@ static void lcd_implementation_init()
 			u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
 			// Welcome message
 			u8g.setFont(u8g_font_9x18);
-			u8g.drawStr(25,38,"PrintBox"); 
+			u8g.drawStr(10,38,"PrintBox Kit"); 
 	   } while( u8g.nextPage() );
 }
 

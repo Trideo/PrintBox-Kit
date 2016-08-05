@@ -61,7 +61,7 @@
 #endif
 
 // Define this to set a custom name for your generic Mendel,
- #define CUSTOM_MENDEL_NAME "PrintBox "
+ #define CUSTOM_MENDEL_NAME "PrintBox Kit "
 
 // This defines the number of extruders
 #define EXTRUDERS 1
@@ -141,12 +141,10 @@
 // 52 is 200k thermistor - ATC Semitec 204GT-2 (1k pullup)
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan) (1k pullup)
 
-//#define TEMP_SENSOR_0 7 // PB Blanca
 #define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 7 //PrintBox 2
-//#define TEMP_SENSOR_BED 1 //PrintBox 1
+#define TEMP_SENSOR_BED 1 //
 
 // This makes temp sensor 1 a redundant sensor for sensor 0. If the temperatures difference between these sensors is to high the print will be aborted.
 //#define TEMP_SENSOR_1_AS_REDUNDANT
@@ -346,12 +344,12 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
-#define min_software_endstops false // If true, axis won't move to coordinates less than HOME_POS.
+#define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 // Travel limits after homing
-#define X_MAX_POS 210    
+#define X_MAX_POS 205    
 #define X_MIN_POS 0
-#define Y_MAX_POS 210
+#define Y_MAX_POS 205
 #define Y_MIN_POS 0
 #define Z_MAX_POS 200
 #define Z_MIN_POS 0
@@ -378,16 +376,11 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-//Prusa I3
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 2560, 102} // Pololu A4998
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {160, 160, 2560, 184}  // Pololu DRV8825
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 160, 5120, 185} //PRINTBOX Z 0.9
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 5120, 177} // kit
+//PrintBox Kit
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 2560, 184} // Cambiar el valor de 184 si el flujo no es optimo. Hacer la prueba de flujo y adaptar este numero segun los resultados
 
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {78.7402,78.7402,200.0*8/3,760*1.1}  // default steps per unit for Ultimaker
 
 #define DEFAULT_MAX_FEEDRATE          {250, 250, 4, 45}    // (mm/sec)
-//#define DEFAULT_MAX_FEEDRATE          {250, 250, 2, 45}    // Printbox Z 0.9
 #define DEFAULT_MAX_ACCELERATION      {700, 700, 50, 5000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          700   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
@@ -424,7 +417,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define PLA_PREHEAT_HPB_TEMP 60
 #define PLA_PREHEAT_FAN_SPEED 255   // Insert Value between 0 and 255
 
-#define ABS_PREHEAT_HOTEND_TEMP 230
+#define ABS_PREHEAT_HOTEND_TEMP 215
 #define ABS_PREHEAT_HPB_TEMP 100
 #define ABS_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
 
@@ -434,7 +427,6 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define SDSUPPORT // Enable SD Card Support in Hardware Console
 //#define SDSLOW // Use slower SD transfer mode (not normally needed - uncomment if you're getting volume init error)
 
-//#define ULTIMAKERCONTROLLER //as available from the ultimaker online store.
 #define ULTIPANEL  //the ultipanel as on thingiverse
 
 // The MaKr3d Makr-Panel with graphic controller and SD support
