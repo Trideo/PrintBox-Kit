@@ -791,25 +791,27 @@ enquecommand_P(PSTR("M82"));//use absolute distances for extrusion
 //{
 //enquecommand_P(PSTR("M106 S255"));
 //}
-enquecommand_P(PSTR("G1 F900.000 E-0.90000"));
-enquecommand_P(PSTR("G92 E0"));
-enquecommand_P(PSTR("G1 Z0.200 F1002"));
-enquecommand_P(PSTR("G1 X27.800 Y27.475 F9000"));
-enquecommand_P(PSTR("G1 E0.0000 F297"));
-enquecommand_P(PSTR("G1 X172.525 Y27.475 E7.2240 F864"));
-enquecommand_P(PSTR("G1 X172.525 Y172.525 E14.4642"));
-enquecommand_P(PSTR("G1 X27.475 Y172.525 E21.7044"));
-enquecommand_P(PSTR("G1 X27.475 Y34.475 E28.5951"));
-enquecommand_P(PSTR("G1 X160.159 Y34.475 E35.2181"));
-enquecommand_P(PSTR("G1 X160.159 Y34.525 E35.2206"));
-enquecommand_P(PSTR("G1 X27.525 Y34.525 E41.8410"));
-enquecommand_P(PSTR("G1 X27.525 Y172.475 E48.7268"));
-enquecommand_P(PSTR("G1 X172.475 Y172.475 E55.9620"));
-enquecommand_P(PSTR("G1 X172.475 Y27.525 E63.1972"));
-enquecommand_P(PSTR("G1 X27.800 Y27.525 E70.4187"));
-enquecommand_P(PSTR("G1 X27.800 Y27.475 E70.4212"));
-enquecommand_P(PSTR("G92 E0"));
-enquecommand_P(PSTR("G1 Z5 F1002"));
+enquecommand_P(PSTR("G1 E-0.90000 F1020.00000"));//ok
+enquecommand_P(PSTR("G92 E0"));//ok
+enquecommand_P(PSTR("G1 Z0.250 F6000.000"));//ok
+enquecommand_P(PSTR("G1 X27.500 Y27.500 F6000.000"));//ok
+enquecommand_P(PSTR("G1 E0.90000 F1020.00000"));//ok
+enquecommand_P(PSTR("G1 X172.200 Y27.500 E9.11700 F1200.000"));//ok
+enquecommand_P(PSTR("G1 X172.449 Y27.551 E9.13141"));//ok
+enquecommand_P(PSTR("G1 X172.500 Y27.800 E9.14582"));//ok
+enquecommand_P(PSTR("G1 X172.500 Y172.200 E17.34579"));//ok
+enquecommand_P(PSTR("G1 X172.449 Y172.449 E17.36020"));//ok
+enquecommand_P(PSTR("G1 X172.200 Y172.500 E17.37461"));//ok
+enquecommand_P(PSTR("G1 X27.800 Y172.500 E25.57457"));//ok
+enquecommand_P(PSTR("G1 X27.551 Y172.449 E25.58898"));//ok
+enquecommand_P(PSTR("G1 X27.500 Y172.200 E25.60340"));//ok
+enquecommand_P(PSTR("G1 X27.500 Y34.800 E33.40585"));//ok
+enquecommand_P(PSTR("G1 X27.551 Y34.551 E33.42027"));//ok
+enquecommand_P(PSTR("G1 X27.800 Y34.500 E33.43468"));//ok
+enquecommand_P(PSTR("G1 X160.459 Y34.500 E40.96791"));//ok
+enquecommand_P(PSTR("G1 E40.06791 F1020.00000"));//ok
+enquecommand_P(PSTR("G92 E0"));//ok
+enquecommand_P(PSTR("G1 Z3 F6000.000"));
 //if (fil_temp == 200)
 //{
 //enquecommand_P(PSTR("M107"));
